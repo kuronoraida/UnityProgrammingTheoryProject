@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Animal : MonoBehaviour
 {
+    // ENCAPSULATION
     protected float waitTime = 1.0f;
     protected const float waitTimeMin = 3.0f;
     protected const float waitTimeMax = 4.0f;
@@ -16,10 +17,14 @@ public class Animal : MonoBehaviour
     protected Rigidbody animalRb;
     protected float jumpForce = 1.0f;
 
+    public string animalName;
+
     // Start is called before the first frame update
     void Start()
     {
         animalRb = GetComponent<Rigidbody>();
+
+        animalName = "Animal";
 
         Invoke("AnimalBehaviour", waitTime);
     }
